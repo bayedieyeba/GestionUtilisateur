@@ -2,8 +2,8 @@
 <c:import url="inc/header.jsp"/>
 		 <div id="corps">
 		 		<c:if test="${status}">
-		 			<div>
-		 				<span id="control" onclick="hideMessageBox()">x</span>
+		 			<div style="color:green;">
+		 				<span id="control" onclick="hideMessageBox()"></span>
 		 				${param.message}
 		 			</div>
 		 		</c:if>
@@ -14,14 +14,15 @@
 			    		<p>La liste est vide </p>
 			    	</c:when>
 			    	<c:when test="${!empty utilisateurs }">
-			    		<table>
+			    	<div class="container">
+			    		<table class="table table-borfered">
 			      		
 						     <tr> 
 						       <th>ID </th>
 						       <th>Nom</th>
 						       <th>Prenom</th>
 						       <th>Login</th>
-						       <th colspan="2">Actions</th>
+						       <th colspan="2"  ><center>Actions</center></th>
 						     </tr>
 						  	  <c:forEach items="${requestScope.utilisateurs}" var="utilisateur">
 							  <tr>  
@@ -30,13 +31,14 @@
 							    	<td> <c:out value="${utilisateur.prenom }"/></td>  
 									<td> <c:out value="${utilisateur.login }"/></td>  
 									
-								     <td>  <a href="<c:url value='/update'/>?id=<c:out value="${utilisateur.id }"></c:out>"> Modifier</a> </td> 
-								     <td>  <a href="<c:url value="/delete"/>?id=<c:out value="${utilisateur.id }"></c:out>"> Supprimer</a> </td>  
+								     <td>  <a href="<c:url value='/update'/>?id=<c:out value="${utilisateur.id }"></c:out>" class="btn btn-outline-primary"> Modifier</a> </td> 
+								     <td>  <a href="<c:url value="/delete"/>?id=<c:out value="${utilisateur.id }"></c:out>" class="btn btn-danger"> Supprimer</a> </td>  
 							  </tr>
+							  
 						    </c:forEach>
 					  
 					    </table>
-			    
+			    	</div>
 			    	</c:when>
 			    </c:choose>
 			    

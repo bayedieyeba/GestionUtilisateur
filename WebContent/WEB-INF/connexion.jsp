@@ -8,6 +8,7 @@
 	<meta charset="ISO-8859-1">
 	<title>Connxion</title>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/css/design.css" />">
+	<link rel="stylesheet" type="text/css" href="<c:url value="/css/bootstrap.min.css" />">
 </head>
 <body>
   <div id="entete">Gestion des utilisateurs</div>
@@ -40,7 +41,7 @@
 			</div>
 			<div class="formItem">
 				<label></label>
-				<input type="submit" value="connecter">
+				<button type="submit"  class="btn btn-primary">Connexion </button>
 			</div>
 		</form>
  </div>

@@ -27,6 +27,7 @@ public class Accueil extends HttpServlet {
     	if( form != null) {
     		session.removeAttribute("form");
     		status = true;
+    		
     	}
     	
     	request.setAttribute("status", status);

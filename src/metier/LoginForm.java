@@ -35,6 +35,7 @@ public class LoginForm {
 			
 			utilisateur = UtilisteurDao.get(login);
 			
+			
 			if(utilisateur != null && !utilisateur.getPassword().equals(password)) {
 				
 				 utilisateur = null;

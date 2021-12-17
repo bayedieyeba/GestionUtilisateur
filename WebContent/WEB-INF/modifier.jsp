@@ -3,19 +3,19 @@
     pageEncoding="ISO-8859-1"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<jsp:useBean id="utilisateur" class="beans.Utilisateur" scope="request"></jsp:useBean>
 <!DOCTYPE html>
 <html>
 <head>
 	<meta charset="ISO-8859-1">
 	<title>Modifier utilisateur</title>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/css/design.css" />">
+	<link rel="stylesheet" type="text/css" href="<c:url value="/css/bootstrap.min.css" />">
 </head>
 <body>
 	<div id="entete">Gestion des utilisateurs</div>
 	<div id="menu">
 		<ul>
-			<li><a href="/">Accueil</a></li>
+			<li><a href="users/list">Accueil</a></li>
 			<li><a href="users/list">Lister</a></li>
 			<li><a href="users/add">Ajouter</a></li>
 		</ul>
@@ -23,7 +23,7 @@
 	<div id="corps">
 			<c:if test="${ !empty form }">
 				<div id="statusMessageBox" class="alert alert-${ form.status ? 'success' : 'danger' }">
-					<span id="control" onclick="hideMesageBox()" title="fermer">x</span>
+					<span id="control" onclick="hideMesageBox()" title="fermer"></span>
 					${ form.statusMessage }
 				</div>
 			</c:if>
@@ -54,9 +54,9 @@
 						<input type="password" name="passwordBis">
 						<span class="erreur" >${form.erreurs.passwordbis}</span>
 					</div>
-					<div class="formItem">
+					<div class="formItem ">
 						<label></label>
-						<input type="submit" value="mdifier">
+						<button type="submit"  class="btn btn-primary">modifier </button>
 					</div>
 			</form>
 	</div>

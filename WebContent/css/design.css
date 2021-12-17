@@ -4,6 +4,11 @@ body
 	padding: 0px;
 	overflow: hidden;
 }
+#control 
+{
+	color: green;
+	text-align: center;
+}
 #entete, #menu, #pied, #corps
 {
 	width: 100%;

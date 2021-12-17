@@ -11,6 +11,7 @@
 		<meta charset="UTF-8">
 		<title>Gestion des Utilisateurs </title>
 	<link rel="stylesheet" type="text/css" href="<c:url value="/css/design.css" />">
+	<link rel="stylesheet" type="text/css" href="<c:url value="/css/bootstrap.min.css" />">
 	<script src="<c:url value="js/script.js" />"></script> 
 	</head>
 	<body>
